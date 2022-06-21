@@ -1,0 +1,754 @@
+* { 
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+ }
+
+ body {  background-image: url(../img/fondo.jpg); }
+
+ html { 
+ 	
+ 		font-family: impact;
+ 		text-align: center;
+ 		color: white;
+ 		overflow-x: hidden ;
+
+  }
+
+
+/*LAYOUT GRID DE TODA LA PAG */ 
+
+
+#grid {  
+
+		display: grid;
+		grid-template-areas:
+		  "header header header " 
+		  "nav nav nav "
+		  "aside section2 section2"
+		  "section3 section3 section3" 
+		  "footer footer footer " ;
+
+		  grid-template-columns: 20vw 60vw 20vw;
+		  grid-template-rows: repeat(4, 0.3fr );
+
+
+
+
+		  grid-gap: 10px;
+		  overflow-x: hidden;
+ }
+
+
+
+.container-fluid2{ padding: 7%; }
+
+
+/*HEADER */
+
+ header { 
+          background-color: rgba(0, 0, 0, 1.0);
+          background-image: url(../img/logo.png);
+          grid-area: header;
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-position: center;
+
+  }
+
+ 	header img { 	
+
+  				 }
+
+ /*NAV*/				 
+
+ nav	{  background-color: black;
+  			grid-area: nav;
+  			padding: 0;}
+
+
+  nav img { width: 100px; }
+
+
+  	 nav ul{
+		list-style: none;
+		font-family: 'Major Mono Display', monospace;;
+			padding: 10px 0;
+			
+				}
+
+		nav ul li {
+		padding: 10px 0;
+
+		
+						}
+
+			nav ul li a {
+			padding: 10px 0;
+			font-size: 2rem;
+			text-decoration: none;
+			color: white;
+
+			
+					}
+/*NAV PARA LAS OTRAS SECCIONES SIN GRID */					
+
+.botonera { background-color: rgba(0, 0, 0, 0.7); }					
+
+ .botonera ul {
+
+ 			list-style: none;
+			font-family: 'Major Mono Display', monospace;;
+			padding: 10px 0;
+			display: inline-flex; }
+
+
+ 	.botonera ul li {  padding: 50px; }
+
+ 		.botonera ul li a { 	padding: 100px 0;
+					font-size: 2rem;
+					text-decoration: none;
+					color: white;
+					display: inline;
+							 }
+
+/*SECCION1*/
+
+.section1 {  background-color: lightblue;
+				grid-area: section1;	}
+
+	.section1 img { width: 100%;
+				height: 100%; }
+
+/*SECCION2*/
+
+.section2  { background: linear-gradient(black, darkslategrey);;
+			grid-area: section2;
+						}
+
+/*SECCION3*/												 
+
+.section3  {  ;
+		grid-area: section3; }
+
+	.section3 iframe { width: 100%;
+			    }
+
+/*ASIDE*/			   			
+
+aside	{ 		background-color: bl;
+			grid-area: aside; 
+			width: 100%;
+
+		}
+
+.main-block h1 { font-size: 10px; }		
+
+.container-fluid { width: 100%; }
+
+
+
+
+
+/*FOOTER*/			
+
+footer { background-color: black;
+		grid-area: footer; }
+
+/*FOOTER INDEX HTML */
+
+.mainFooterindex {
+
+			font-size: 1rem;
+			text-align: center;
+			padding: 5% 0;
+			margin: 20px 0;
+			background-color: rgba(255, 255, 255, 0.3);
+			align-items: center; }
+
+
+	.mainFooterindex img { 		width:	100px;
+					height: 100px;
+					padding: 20px; }
+
+			.mainFooterindex h3 { font-size: 20px; 
+						color: white;}
+
+/*FOOTER PARA LAS OTRAS SECCIONES */							
+
+
+.mainFooter {
+			
+		font-size: 1rem;
+		text-align: center;
+		padding: 5% 0;
+		margin: 20px 0;
+		background-color: rgba(255, 255, 255, 0.3);
+		align-items: center; }
+
+
+		.mainFooter img { 	width: 100px;
+					height: 100px;
+					padding: 20px; }
+
+				
+/*FORM*/ 
+
+	
+      .main-block h1 { font-size: 0.5rem; }
+
+ 
+      .main-block label { font-size :10px; } 
+      
+      
+      hr {
+      color: #a9a9a9;
+      opacity: 0.3;
+      }
+      
+      		
+      .main-block {
+
+      color: grey;
+      font-size: 1rem;
+      width: 100%; 
+      padding: 100px 0;
+      margin: auto;
+      border-radius: 5px; 
+      border: solid 1px #ccc;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      background: #ebebeb;
+      background-size: cover; 
+      }
+      form {
+      margin: 0 10px;  }
+  
+      }
+      input[type=radio] {
+      display: flex;
+      }
+      
+
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      border: 3px solid #fff;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      input[type=text], input[type=password] {
+      width: calc(100% - 50px);
+      margin: 13px 0 0 -5px;
+      padding-left: 10px; 
+      border-radius: 0 5px 5px 0;
+      border: solid 1px #cbc9c9; 
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #fff; 
+      font-size: 1rem;
+      }
+      input[type=password] {
+      margin-bottom: 15px;
+      }
+      #icon {
+      display: inline-block;
+      padding: 9.3px 15px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #1c87c9;
+      color: #fff;
+      text-align: center;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #1c87c9; 
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #26a9e0;
+      }
+
+
+      /*Seccion Remeras*/
+
+#remeras {
+
+
+
+	text-transform: uppercase;
+	text-align: center;
+	font-family: ;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: 2px 0;
+	overflow-x: hidden;
+
+
+			}
+
+#remeras h1 {
+
+	font-size: 100px;
+	text-align: center;
+	color: white;
+			}
+
+	#remeras .seccionRemeras {
+
+		margin: 2px;
+
+		display: flex;
+		flex-direction: column;
+
+
+		justify-content: space-evenly;}
+
+
+
+			#remeras .seccionRemeras figure{
+
+			text-align: center;
+
+			padding: 50px 10px;  }
+
+				#remeras .seccionRemeras figure img{
+
+						width: 400px;
+						border-style: outset;
+						border-color: black;
+
+								}
+
+					#remeras .seccionRemeras figure figcaption {
+
+							font-size: 1.6rem;
+							color: white;
+									  }
+
+				#remeras .seccionRemeras figure p{
+
+						font-size: 1.3rem;
+						color: lightblue ;
+						padding-bottom: 10px;
+
+								}
+
+			/*Seccion Descuentos*/
+
+.grid { display: grid;  
+        grid-template-areas: 
+        "div div div" 
+          "article article aside"
+           "footer footer footer";
+           grid-template-columns: 10% 1fr 1fr auto;
+           grid-template-rows: auto
+           min-width: 100vh;
+           grid-column-gap: 10px;
+           grid-row-gap: 10px;
+           overflow-x: hidden;
+           overflow-y: hidden;
+			} 
+.div{ background-color: white;
+          grid-area: div;
+       }
+
+
+.subNone {
+        text-decoration: none;}
+
+
+.div img {
+		width: 150px;
+		margin: 15px;
+		align-items: center;}
+
+	.div a {
+        	text-decoration: none;}
+
+
+.article img { width: 100%;
+               height: 100%;}
+
+.aside img { width: 100%;
+             height: 100%; }
+
+.nav { background: linear-gradient(black, darkslategrey);
+	grid-area: nav;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+		 }
+
+	.nav h1 { font-size: 20px;
+ 		text-align: center;
+ 		padding: 70%;
+
+       		 color: white; }
+        
+.article { background-color: grey;
+grid-area: article; 
+cursor: pointer;}
+
+.aside {background-color: grey;
+grid-area: aside;}
+
+.footer{ background-color: white;
+        grid-area: footer;
+        color: white; }
+
+.footer img { 
+                max-width: 200px;
+                padding: 50px 0;
+               
+               }
+
+
+ /*Seccion Gorras*/
+
+ #gorras {
+
+ 	text-transform: uppercase;
+		font-size: 1rem;
+		font-family: ;
+		background-color: rgba(255, 255, 255, 0.1);
+		margin: 20px 25px;
+		padding: 30px 0;
+			 					}
+
+	 #gorras article {
+
+		width: 70%;
+	 	display: flex;
+	 	flex-direction: column;
+	 	margin: auto;
+	 	padding: 50px 10px;
+	 	color: white;
+
+			 	    }
+		 /*Seccion Buzos*/
+
+ #camperas {
+
+	 	text-transform: uppercase;
+		text-align: center;
+		font-size: 30px;
+		padding: 20px 0;
+		font-family: ;
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+
+			 	}
+
+#camperas img { width: 100%; 
+		padding-left: 45%;}	
+
+#camperas h1 { font-size: 60%;
+		padding: 20px 0;
+		padding-left: 45%;
+		color: white;
+				 }				 	
+
+		/*Seccion Riders*/
+
+ #riders {
+
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1rem;
+		padding: 30px 50px ;
+		font-family: roboto;
+		background-color: rgba(255, 255, 255, 0.1);
+		margin: 30px 5px;
+		display: flex;
+		flex-direction: column;  }
+
+	#riders h2 { color: white; }
+
+	    #riders h1 { color: white; }
+
+		#riders p { color: white;
+			    font-size: 40%; }	
+
+			    #riders article iframe { width: 70%;  }	
+
+/*Breakpoint para resoluciones menores a 768px*/		
+
+@media only screen and (max-width: 768px){
+
+	body {overflow-x: hidden;}
+
+	/*GRID*/
+
+#grid {
+		grid-template-areas:
+		  "header header header "
+		  "nav nav nav" 
+		  "section2 section2 section2"
+		  "section3 section3 section3"
+		  "aside aside aside" 
+		  "footer footer footer " ;
+
+		  grid-template-columns: 20vw 80vw;
+		  grid-template-rows:auto;
+		  grid-gap: 20px;
+		  overflow-x: hidden;
+
+
+ }
+
+
+ .section2 img { 
+	width: 100px;  }
+
+.section3  {  
+		grid-area: section3;
+		width: auto;
+
+		 }
+
+	.section3 iframe { width: 100%;
+			    }	
+
+
+
+.mainFooterindex h3 { font-size: 20px; }	
+
+	.mainFooterindex img { width: 100px;
+ 				height: 100px; }
+
+.main-block {  
+	        color: grey;
+     		font-size: 1rem;
+      		width: 100%; 
+      		padding: 100px 0;
+     		margin: auto;
+      		border-radius: 5px; 
+     		border: solid 1px #ccc;
+      		box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      		background: #ebebeb;
+     		background-size: cover; 
+
+
+}
+
+
+#remeras {
+
+
+
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 0.5rem;
+	padding: 20px 0;
+	font-family: ;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: 20px 0;
+;
+
+
+			}
+
+#remeras h1 {
+
+	font-size: 60px;
+			}
+
+	#remeras .seccionRemeras {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		width: 100vw;
+
+	}
+
+
+
+			#remeras .seccionRemeras figure{
+
+			text-align: center;
+
+			padding: 10px 0;  }
+
+				#remeras .seccionRemeras figure img{
+
+						width: 400px;
+						height: auto;
+						border-style: outset;
+						border-color: black;
+
+								}
+
+					#remeras .seccionRemeras figure figcaption {
+
+							font-size: 1.6rem;
+									  }
+
+				#remeras .seccionRemeras figure p{
+
+						font-size: 1.3rem;
+						color: lightblue ;
+						padding-bottom: 10px;
+
+								}
+
+				/*DESCUENTOS*/				
+.grid { display: grid;  
+        grid-template-areas: 
+        "div div div"
+         "nav nav nav" 
+          "article article article"
+          "aside aside aside"
+           "footer footer footer";
+           grid-template-columns: 100%;
+           grid-template-rows: auto;
+           grid-column-gap: 10px;
+           grid-row-gap: 2px;
+           overflow-x: hidden;
+           overflow-y: hidden;	
+           display: flex;
+           flex-direction: column;							
+
+
+
+	
+}		
+
+
+
+/*Breakpoint para resoluciones menores a 320px*/	
+
+
+@media only screen and (max-width: 320px){
+
+	#grid {  
+
+		display: grid;
+		grid-template-areas:	   
+		  "header"
+		  "nav"
+		  "section2" 
+		  "section3" 
+		  "aside" 
+		  "footer";
+		  grid-template-columns: 320px;
+		  grid-template-rows: auto;
+		  grid-gap: 0;
+		  overflow-x: hidden;
+
+					}
+ }
+
+
+  /*Seccion Remeras*/
+
+#remeras {
+
+
+
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 0.2rem;
+	font-family: ;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: 2px 0;
+	overflow-x: hidden;
+
+
+			}
+
+#remeras h1 {
+
+	font-size: 70px;
+	text-align: center;
+			}
+
+	#remeras .seccionRemeras {
+
+		margin: 0;
+
+		display: flex;
+		flex-direction: column;
+
+
+		justify-content: space-evenly;}
+
+
+
+			#remeras .seccionRemeras figure{
+
+			text-align: center;
+
+			padding: 50px 10px;  }
+
+				#remeras .seccionRemeras figure img{
+
+						width: 70%;
+						border-style: outset;
+						border-color: black;
+
+								}
+
+					#remeras .seccionRemeras figure figcaption {
+
+							font-size: 1.6rem;
+									  }
+
+				#remeras .seccionRemeras figure p{
+
+						font-size: 1.3rem;
+						color: lightblue ;
+						padding-bottom: 10px;
+
+								}
+
+
+nav ul li a { font-size: 20px; }					
+
+.section2 img { 
+
+		width: 100px;
+		paddingx;}
+
+
+header img { 	
+	width: 100%;
+	padding: 100px 20px 100px 0; }							
+
+ .mainFooterindex img { width: 100px;
+ 			height: 100px;	 }
+
+	.mainFooterindex h3 { font-size: 20px; }
+
+.main-block { visibility: visible; }
+
+	.main-block h1 { font-size: 30px; }
+
+ 
+		.main-block label { font-size :20px; } 
+
+
+
+
+
+
+
+
+
+
